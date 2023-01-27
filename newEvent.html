@@ -58,7 +58,7 @@
             </button>
 
             <div class="collapse navbar-collapse ms-auto" id = "ex1">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto" role="tablist">
                     <li class="nav-item" role="presentation">
                         <a href="newEvent.html" class = "nav-link">New Events</a>
                     </li>
@@ -93,20 +93,113 @@
     <div class="line1"></div>
 
     <main class="main">
-        <div class="container-lg p-sm-5 pb-xxl-0">
-            <section class = "h-100 container-fluid pe-auto">
-                <div class="p-5 ms-auto">
-                    <h1 class="mb-3">Queen City Food Trucks</h1>
-                    <p>On the hunt for some of the best food trucks in the Charlotte area? Look no further!</p>
 
-                    <p>Queen City Food Trucks is a website that provides all the information you need to try some of the 
-                        best food trucks in the area.
-                    </p>
+        <section id = "contact">
+            <div class="container-lg p-5">
+                <div class="text-center">
+                    <h2>Got an Event?</h2>
+                    <p>Fill out this form and we can get started!</p>
                 </div>
-                
-            </section>
+
+                <div class="row justify-content-center my-5 p-5">
+                    <form action="#">
+                        <label for="category" class="form-label">Category:</label>
+                        <select class = "form-select" name="category" id="category">
+                            <option value = "American">Choose One</option>
+                            <option value = "American">American</option>
+                            <option value="African">African</option>
+                            <option value="Asian">Asian</option>
+                            <option value="European">European</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <label for="name" class="form-label">Your Name:</label>
+                        <input type="text" class = "form-control" id = "name" placeholder="John Doe">
+                        
+                        <label for="email" class="form-label">Email Address:</label>
+                        <input type="email" class = "form-control" id = "email" placeholder="example@email.com">
+
+                        <label for="nameFoodTruck" class="form-label">Food Truck Name:</label>
+                        <input type="text" class = "form-control" id = "nameFoodTruck" placeholder="Food Truck" >
+
+                        <label for="nameFoodTruck" class="form-label">From:</label>
+                        <input type="text" class = "form-control" id = "nameFoodTruck" placeholder="Food Truck" >
+
+                        <label for="nameFoodTruck" class="form-label">To:</label>
+                        <input type="text" class = "form-control" id = "nameFoodTruck" placeholder="Food Truck" >
+                        
+                        <label for="details" class="form-label">Details:</label>
+                        <textarea class = "form-control" id = "details" style = "height: 140px" placeholder="I was thinking..."></textarea>
+
+                        <label for="picture" class="form-label">Picture:</label>
+
+                        <div class="mb-4 text-center p-5">
+                            <button class = "btn btn-secondary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--<div class="container-event">
+            <h1>Connect With Me!</h1>
+            <p>Input your information and I'll try to get in touch with you as fast as I can.</p>
         </div>
-        
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send Your Request</h3>
+                <form>
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input type="text" placeholder = "Prince Thompson">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" placeholder = "+1 (888) 768 - 5309">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" placeholder = "princethompson@princeportfolio.com">
+                        </div>
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input type="text" placeholder = "Great Opportunities">
+                        </div>
+                    </div>
+
+                    <label>Message</label>
+                    <textarea rows = "5" placeholder = "Let's Get in Touch!"></textarea>
+
+                    <button id = "dialog-link">Send</button>
+
+                    <!-- ui-dialog
+                    <div id="dialog" title="Thanks for the Info">
+                        <p>I'll be sure to get back with you shortly!</p>
+                    </div>
+                </form>-
+            </div>
+            <div class="contact-right">
+                <h3>Reach Me</h3>
+
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td>davthom321@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone:</td>
+                        <td>+1 (504) 501 - 5829</td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>Charlotte, North Carolina</td>
+                    </tr>
+                </table>
+            </div>
+        </div>-->
     </main>
     
     
