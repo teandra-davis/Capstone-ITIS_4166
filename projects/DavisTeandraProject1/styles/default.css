@@ -17,9 +17,26 @@ body {
     height: 100%;
 }
 
+
 .main {
-    overflow: auto;
-    padding-bottom: 0px; /*this had to be bigger than the footer height*/
+    overflow: visible;
+    padding-bottom: 400px; /*this had to be bigger than the footer height*/
+}
+
+.main-events {
+    padding-bottom: 550px;
+}
+
+.main-event {
+    padding-bottom: 200px;
+}
+
+.main-index {
+    padding-bottom: 0px;
+}
+
+.main-newEvent {
+    padding-bottom: 600px;
 }
 
 :root {
@@ -37,6 +54,7 @@ body {
     color: rgba(11, 11, 11, 0.869);
     transition: .20s;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .nav-size {
@@ -48,13 +66,14 @@ body {
     font-size: 20px;
 }
 
-.navbar-two li {
-
+.navbar-one {
+    margin: 0px;
 }
 
 /*NAVIGATION BAR*/
 .navbar-custom {
-    background-color: var(--main-color)
+    background-color: var(--main-color);
+    height: 90px;
 }
 
 .copyright-custom{
