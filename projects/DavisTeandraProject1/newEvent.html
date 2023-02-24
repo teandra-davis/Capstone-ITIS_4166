@@ -15,10 +15,12 @@
     <!--Font Awesome, JS-->
     <script src="https://kit.fontawesome.com/d618469229.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://unpkg.com/gijgo@1.9.14/css/gijgo.min.css" rel="stylesheet" type="text/css">
+
+    <!--jQuery DateTimePicker-->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+
 
     <!--Script Link-->
     <script src = "scripts/main.js"></script>
@@ -119,12 +121,12 @@
                         <br>
 
                         <label for = "datepicker1">To:</label>
-                        <input type='text' class="form-control" id = "datepicker1" placeholder = "Starting..." required>
+                        <input type='text' class="form-control" id = "datetimepicker1" placeholder = "Starting..." required>
 
                         <br>
 
                         <label for = "datepicker2">From:</label>
-                        <input type='text' class="form-control" id = "datepicker2" placeholder = "Ending..." required>
+                        <input type='text' class="form-control" id = "datetimepicker2" placeholder = "Ending..." required>
 
                         <br>
                        
@@ -221,9 +223,18 @@
         </div>
 
     </footer>
-    
-    
 
+    <!--<script>
+        $(function () {
+            $('#datetimepicker1').datetimepicker();
+            $('#datetimepicker1').data("DateTimePicker").date(moment(new Date ).format('DD/MM/YYYY HH:mm'));
+         });
+         
+         $(function () {
+             $('#datetimepicker2').datetimepicker();
+             $('#datetimepicker2').data("DateTimePicker").date(moment(new Date ).format('DD/MM/YYYY HH:mm'));
+         });
+    </script>-->
     
 </body>
 </html>

@@ -23,20 +23,22 @@ exports.create = (req, res) => {
 };
 
 //GET /stories/:id: send details of story identified by id
-exports.show = (req, res) => {
+exports.show = (req, res, next) => {
     let id = req.params.id;
     let story = model.findById(id);
     if(story) {
         res.render('./story/show', {story});
     } else{
         //Error message if not found
-        res.status(404).send('Cannot find story with id ' + id);
+        let err = new Error('Cannot find a story with id ' + id);
+        error.status = 404;
+        next(error);
     }
     
 };
 
 //GET /stories/:id/edit: send html form for editing an exisiting stories
-exports.edit = (req, res) => {
+exports.edit = (req, res, next) => {
     let id = req.params.id;
     let story = model.findById(id);
 
@@ -44,31 +46,37 @@ exports.edit = (req, res) => {
         res.render('./story/edit', {story});
     } else {
         //Error message if not found
-        res.status(404).send('Cannot find story with id ' + id);
+        let err = new Error('Cannot find a story with id ' + id);
+        error.status = 404;
+        next(error);
     }
     
 };
 
 //PUT /stories/:id: update the story identified by id
-exports.update = (req, res) => {
+exports.update = (req, res, next) => {
     let story = req.body;
     let id = req.params.id;
 
     if (model.updateById(id, story)) {
         res.redirect('/stories/'+id);
     } else {
-        res.status(404).send('Cannot find story with id ' + id);
+        let err = new Error('Cannot find a story with id ' + id);
+        error.status = 404;
+        next(error);
     }
 };
 
 //DELETE /stories/:id: delete the story identified by id
-exports.delete = (req, res) => {
+exports.delete = (req, res, next) => {
     let id = req.params.id;
 
     if (model.deleteById(id)) {
         res.redirect('/stories/');
     } else {
-        res.status(404).send('Cannot find story with id ' + id);
+        let err = new Error('Cannot find a story with id ' + id);
+        error.status = 404;
+        next(error);
     }
 };
 

@@ -54,7 +54,7 @@ exports.updateById = function(id, newStory) {
 };
 
 exports.deleteById = function(id) {
-    let index = stories.findById(story => story.id === id);
+    let index = stories.findIndex(story => story.id === id);
     if(index !== -1){
         stories.splice(index, 1);
         return true;

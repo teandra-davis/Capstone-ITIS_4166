@@ -25,6 +25,25 @@ app.get('/', (req, res) =>{
 
 app.use('/stories', storyRoutes);
 
+//404 Error Handlers
+app.use((req, res, next) => {
+    let err = new Error('The server cannot locate ' + req.url);
+    err.status = 404;
+    next(err);
+});
+
+//Error Handler
+app.use((err, req, res, next) => {
+    console.log(err.stack);
+    if(!err.status) {
+        err.status = 500;
+        err.message = ("Internal Server Error");
+    }
+
+    res.status(err.status);
+    res.render('error', {error: err});
+});
+
 //6. Start the server
 app.listen(port, host, () =>{
     console.log('Server is running at port: ', port);
