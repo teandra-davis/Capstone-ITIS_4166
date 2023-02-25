@@ -32,6 +32,21 @@ app.get('/', (req, res) =>{
     res.render('index');
 });
 
+app.get('/contact', (req, res) => {
+    //Contact page EJS
+    res.render('contact');
+});
+
+app.get('/about', (req, res) => {
+    //Contact page EJS
+    res.render('about');
+});
+
+app.post('/events/new', fileUpload, (req, res, next) => {
+    let image =  "./images/" + req.file.filename;
+    res.render('/events', {image});
+});
+
 /*app.post('/events', fileUpload, (req, res, next) => {
     let image = "./image/" + req.file.filename;
     res.render('index', {image});

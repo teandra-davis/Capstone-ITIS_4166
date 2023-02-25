@@ -8,22 +8,22 @@ const events = [
         hostName: "John Doe",
         location: "WT Harris",
         //DateTime Create MVC Components/Models
-        startDate: 'July 13th, 2023 11AM',
-        endDate: 'July 13th, 2023 2PM',
+        startDate: '2023/02/27 19:00',
+        endDate: '2023/02/28 19:00',
         details: 'Super tasty food!',
-        image: '/images/Most-Popular-American-Foods.webp'
+        image: 'images/Most-Popular-American-Foods.webp'
     },
     {
         id: '2',
         title: 'Blue lagoon Cafe',
         category: "American",
         hostName: "John Doe",
-        location: "WT Harris",
+        location: "University City",
         //DateTime Create MVC Components/Models
         startDate: 'July 13th, 2023 11AM',
         endDate: 'July 13th, 2023 2PM',
         details: 'Super tasty food!',
-        image: ''
+        image: 'images/American-Food-Icons-Social-IMG.jpg'
     },
     {
 
@@ -36,7 +36,7 @@ const events = [
         startDate: 'July 13th, 2023 11AM',
         endDate: 'July 13th, 2023 2PM',
         details: 'Super tasty food!',
-        image: ''
+        image: 'images/American-Food-Icons-Social-IMG.jpg'
     },
     {
 
@@ -49,7 +49,72 @@ const events = [
         startDate: 'July 13th, 2023 11AM',
         endDate: 'July 13th, 2023 2PM',
         details: 'Super tasty food!',
+        image: 'images/American-Food-Icons-Social-IMG.jpg'
+    },
+    {
+
+        id: '5',
+        title: 'Jolof on Wheels',
+        category: "African",
+        hostName: "John Doe",
+        location: "WT Harris",
+        //DateTime Create MVC Components/Models
+        startDate: 'July 13th, 2023 11AM',
+        endDate: 'July 13th, 2023 2PM',
+        details: 'Super tasty food!',
+        image: 'images/American-Food-Icons-Social-IMG.jpg'
+    }, 
+    {
+
+        id: '6',
+        title: 'The Cooking Pot',
+        category: "African",
+        hostName: "John Doe",
+        location: "WT Harris",
+        //DateTime Create MVC Components/Models
+        startDate: 'July 13th, 2023 11AM',
+        endDate: 'July 13th, 2023 2PM',
+        details: 'Super tasty food!',
+        image: 'images/Most-Popular-American-Foods.webp'
+    }, 
+    {
+
+        id: '7',
+        title: 'Katsu Kart',
+        category: "Asian",
+        hostName: "John Doe",
+        location: "WT Harris",
+        //DateTime Create MVC Components/Models
+        startDate: 'July 13th, 2023 11AM',
+        endDate: 'July 13th, 2023 2PM',
+        details: 'Super tasty food!',
         image: ''
+    }, 
+    {
+
+        id: '8',
+        title: 'Hawkers Asian Street Food',
+        category: "Asian",
+        hostName: "John Doe",
+        location: "WT Harris",
+        //DateTime Create MVC Components/Models
+        startDate: 'July 13th, 2023 11AM',
+        endDate: 'July 13th, 2023 2PM',
+        details: 'Super tasty food!',
+        image: 'images/Most-Popular-American-Foods.webp'
+    },
+    {
+
+        id: '9',
+        title: 'Halal Food Cart',
+        category: "Asian",
+        hostName: "John Doe",
+        location: "WT Harris",
+        //DateTime Create MVC Components/Models
+        startDate: '2023/02/27 19:00',
+        endDate: '2023/02/28 19:00',
+        details: 'Super tasty food!',
+        image: 'images/Most-Popular-American-Foods.webp'
     }
 ];
 

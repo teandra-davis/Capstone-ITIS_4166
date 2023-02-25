@@ -99,6 +99,15 @@ body {
     padding-top: 150px;
 }
 
+.links {
+    all: unset;
+}
+
+.links:hover {
+    text-transform: uppercase;
+    color: black;
+}
+
 /*END OF INDEX.HTML*/
 
 /*BEGINNING OF EVENTS.HTML*/

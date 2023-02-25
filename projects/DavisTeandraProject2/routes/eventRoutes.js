@@ -2,6 +2,9 @@ const express = require('express');
 //Importing the storyController
 const controller = require('../controllers/eventController');
 const router = express.Router();
+//Edited 
+const {fileUpload} = require('../middleware/fileUpload');
+
 
 //GET /events: send all events to the user
 router.get('/', controller.index);
@@ -10,8 +13,8 @@ router.get('/', controller.index);
 router.get('/new', controller.new);
 
 //POST /stories: create a new event
-
-router.post('/', controller.create);
+//Edited
+router.post('/', fileUpload, controller.create);
 
 //Added
 //router.post('/', controller.image);

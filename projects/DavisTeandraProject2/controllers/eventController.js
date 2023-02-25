@@ -18,8 +18,10 @@ exports.create = (req,res) => {
     //res.send('Created a new event');
     //Read the information from post request
     let event = req.body;
+    let image = "./images/" + req.file.filename;
+    event.image = image;
     model.save(event);
-    res.redirect('/events');
+    res.redirect('/events', 302);
 };
 
 
