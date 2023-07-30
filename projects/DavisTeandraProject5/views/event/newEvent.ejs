@@ -1,0 +1,65 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="line1"></div>
+
+    <main class="main-newEvent">
+
+        <section id = "contact">
+            <div class="container-fluid p-5" style="height: 600px;">
+                <div class="text-center">
+                    <h2>Got an Event?</h2>
+                    <p>Fill out this form and we can get started!</p>
+                </div>
+
+                <div class="row justify-content-center my-5 p-5">
+                    <form action="/events/create" method="POST" enctype="multipart/form-data">
+                        <label for="category" class="form-label">Category:</label>
+                        <select class = "form-select" name="category" id="category" required>
+                            <option value = "">Choose One</option>
+                            <option value = "American">American</option>
+                            <option value="African">African</option>
+                            <option value="Asian">Asian</option>
+                            <option value="European">European</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <br>
+
+                        <label for="title" class="form-label">Food Truck Name:</label>
+                        <input type="text" class = "form-control" name = "title" id = "title" placeholder="Food Truck" required>
+
+                        <br>
+
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" class = "form-control" name = "location" id = "location" placeholder="Charlotte, NC" required>
+
+                        <br>
+
+                        <label for = "startDate">To:</label>
+                        <input type='text' class="form-control" name = "startDate" id = "startDate" placeholder = "Starting..." required>
+
+                        <br>
+
+                        <label for = "endDate">From:</label>
+                        <input type='text' class="form-control" name = "endDate" id = "endDate" placeholder = "Ending..." required>
+
+                        <br>
+                    
+                        <label for="details" class="form-label">Details:</label>
+                        <textarea class = "form-control" name = "details" id = "details" style = "height: 140px" placeholder="I was thinking..." required></textarea>
+
+                        <label for="image" class="form-label">Picture:</label>
+                        <input class = "form-control mb-3" type = "file" name = "image" id = "image" required>
+
+                        
+                        <button value = "submit" class = "btn btn-secondary mx-auto d-block mb-3" type = "submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="line1"></div>
+
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,47 @@
+<%- include('../partials/header.ejs')%>
+
+<div class="line1"></div>
+
+<main class="main-events">
+    <div class="container p-5">
+        <% if(events.length) { %>
+            <% const categories = ['American', 'African', 'Asian', 'European', 'Other']; %>
+            <% categories.forEach(category => { %>
+                <% const categoryEvents = events.filter(event => event.category === category); %>
+                <% if(categoryEvents.length) { %>
+                    <div class="row mt-3">
+                        <div class="card mb-3" style="width:600px">
+                            <div class="card-body" style="width: 18rem;">
+                                <h4 class="card-title"><%= category %></h4>
+                                <% if(category === 'American') { %>
+                                    <h6 class="card-subtitle text-muted">Enjoy the product of diversity</h6>
+                                <% } else if(category === 'African') { %>
+                                    <h6 class="card-subtitle text-muted">Enjoy the abundance of spices and herbs</h6>
+                                <% } else if(category === 'Asian') { %>
+                                    <h6 class="card-subtitle text-muted">Enjoy local, authentic, traditional asian food</h6>
+                                <% } else if(category === 'European') { %>
+                                    <h6 class="card-subtitle text-muted">From all parts of Europe</h6>
+                                <% } else if(category === 'Other') { %>
+                                    <h6 class="card-subtitle text-muted">Don't worry, we've</h6>
+                                <% } %>
+                                <% categoryEvents.forEach(event => { %>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item p-0"><a href="/events/<%= event._id %>"><%= event.title %></a></li>
+                                        </ul>     
+                                    </div>
+                                <% }); %>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+            <% }); %>
+        <% } else { %>
+            <p>There are no events to display...</p>
+        <% } %>          
+    </div>
+</main>
+
+<div class="line1"></div>
+
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,138 @@
+/*Accessability*/
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding-bottom: 120px;
+    height: 100%;
+}
+
+
+.main {
+    overflow: visible;
+    padding-bottom: 400px; /*this had to be bigger than the footer height*/
+}
+
+.main-events {
+    padding-bottom: 600px;
+}
+
+.main-event {
+    padding-bottom: 200px;
+}
+
+.main-index {
+    padding-bottom: 0px;
+}
+
+.main-newEvent {
+    padding-bottom: 800px;
+}
+
+.main-edit {
+    padding-bottom: 800px;
+}
+
+.div1 {
+    background: #f00;
+}
+
+
+:root {
+    --main-color: rgb(161, 176, 176);
+}
+
+/*BEGINNING OF INDEX.HTML*/
+
+.line1 {
+    height: 1px;
+    background: rgb(142, 141, 141);
+}
+
+.navbar ul li a:hover {
+    color: rgba(11, 11, 11, 0.869);
+    transition: .20s;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-size {
+    width: 1000px;
+}
+
+.navbar-one li {
+    padding: 20px;
+    font-size: 20px;
+}
+
+.navbar-one {
+    margin: 0px;
+}
+
+/*NAVIGATION BAR*/
+.navbar-custom {
+    background-color: var(--main-color);
+    height: 90px;
+}
+
+.copyright-custom{
+    background-color: var(--main-color);
+}
+
+/*FOOTER*/
+
+.footer {
+    position: relative;
+    margin-top: -150px; /* negative value of footer height */
+    height: 150px;
+    clear:both;
+    padding-top: 150px;
+}
+
+.links {
+    all: unset;
+}
+
+.links:hover {
+    text-transform: uppercase;
+    color: black;
+}
+
+/*END OF INDEX.HTML*/
+
+/*BEGINNING OF EVENTS.HTML*/
+  
+/*END OF EVENTS.HTML*/
+
+.btn1 {
+    text-align: center;
+}
+
+.success {
+    background: rgba(108, 192, 112, 0.7);
+    color: #fff;
+    width: 70%;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    padding: 0.5rem 0;
+  
+  }
+  
+.error {
+background: rgba(255, 102, 51, 0.7);
+color: #fff;
+width: 70%;
+margin: 0 auto 1rem auto;
+text-align: center;
+padding: 0.5rem 0;
+}

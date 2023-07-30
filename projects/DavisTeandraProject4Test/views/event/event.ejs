@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs')%>
+<div class="line1"></div>
+
+    <main class="main-event">
+       
+        <div class="container p-5" style="height: 900px;">
+            <div class="row mt-3">
+                <div class="card">
+                    <div class="card-body" style = "width: 400px;">
+                        <!--Whatever image-->
+                        <img class = "card-img-top" src="/<%= event.image%>" alt="" style="width: 410px; height: auto;">
+                        <br>
+                        <br>
+                        <h4 class="card-title"><% event.category%></h4>
+                        <br>
+                        <h6 class="card-subtitle text-muted">We know you're hungry, here's the details...</h6>
+                        <br>
+                        <div class="card-text">
+                            <p><span class="font-weight-bold">Food Truck Name: </span><%= event.title%></p>
+                            <p><span class="font-weight-bold">Host Name: </span><%= user.firstName + ' ' + user.lastName%></p>
+                            <p><span class="font-weight-bold">Date/Time: </span><%= event.startDate%> <strong>to</strong> <%= event.endDate%></p>
+                            <p><span class="font-weight-bold">Location: </span><%= event.location%></p>
+                            <p><span class="font-weight-bold">Details: </span><%= event.details%></p>
+                        </div>
+
+                        <% console.log("User in EJS:", user) %>
+
+                        <% if(user._id == event.author._id) { %>
+                            <form>
+                                <div class="text-center">
+                                    <button class="btn" type = "submit" formmethod = "GET" formaction = "/events/<%= event._id%>/edit"><i class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class = "btn btn-event" formmethod="POST" formaction="/events/<%= event._id%>?_method=DELETE"><i class="fa-solid fa-trash"></i></button>
+                                </div>
+                            </form>
+                        <% } %> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    
+    
+    <div class="line1"></div>
+
+    <%- include('../partials/footer.ejs')%>

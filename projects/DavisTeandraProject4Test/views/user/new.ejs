@@ -1,0 +1,44 @@
+<%- include('../partials/header.ejs')%>
+    <div class = "container py-5" style="height: 800px;">
+        <div class="text-center py-5">
+            <h1>Sign Up</h1>
+        </div>
+        <form action = '/users' method = 'POST' class="user-form">
+            <!--First Name-->
+            <div class="form-outline mb-4">
+                <label class= "form-label" for="firstName">First Name</label>
+                <input class= "form-control" type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <!--Last Name-->
+            <div class="form-outline mb-4">
+                <label class= "form-label" for="lastName">Last Name</label>
+                <input class= "form-control" type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <!--Email-->
+            <div class="form-outline mb-4">
+                <label class= "form-label" for="email">Email</label>
+                <input class= "form-control" type="email" id="email" name="email" required>
+            </div>
+
+            <!--Password-->
+            <div class="form-outline mb-4">
+                <label class= "form-label" for="password">Password</label>
+                <input class= "form-control" type="password" id="password" name="password" minlength="8" required>
+            </div>
+            
+            
+            <!--<label for="lastName">Last Name</label></td>
+            <input type="text" id="lastName" name="lastName" required></td>
+        
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" minlength="8" required>-->
+
+            <button class="btn btn-primary btn-block mb-4" type="submit" value="Sign Up">Sign Up</button>     
+        </form>
+    </div>
+<%- include('../partials/footer.ejs')%>

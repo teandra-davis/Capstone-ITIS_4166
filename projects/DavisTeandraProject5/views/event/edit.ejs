@@ -1,0 +1,65 @@
+<%- include('../partials/header.ejs')%>
+
+    <div class="line1"></div>
+
+    <main class="main-edit">
+
+        <section id = "contact">
+            <div class="container-fluid p-5" style="height: 600px;">
+                <div class="text-center">
+                    <h2>Uh Oh...</h2>
+                    <p>Let's get that fixed for you...</p>
+                </div>
+
+                <div class="row justify-content-center my-5 p-5">
+                    <form method = "POST" action="/events/<%= event._id%>?_method=PUT" enctype="multipart/form-data">
+                        <label for="category" class="form-label">Previous Category: <%= event.category%></label>
+                        <select class = "form-select" name="category" id="category" required>
+                            <option value = "">Choose One</option>
+                            <option value = "American">American</option>
+                            <option value="African">African</option>
+                            <option value="Asian">Asian</option>
+                            <option value="European">European</option>
+                            <option value="Other">Other</option>
+                        </select>
+
+                        <br>
+
+                        <label for="title" class="form-label">Food Truck Name:</label>
+                        <input type="text" class = "form-control" name = "title" id = "title" value="<%= event.title%>" required>
+
+                        <br>
+
+                        <label for="location" class="form-label">Location:</label>
+                        <input type="text" class = "form-control" name = "location" id = "location" value="<%= event.location%>" required>
+
+                        <br>
+
+                        <label for = "startDate">To:</label>
+                        <input type='text' class="form-control" name = "startDate" id = "startDate" value="<%= event.startDate%>" required>
+
+                        <br>
+
+                        <label for = "endDate">From:</label>
+                        <input type='text' class="form-control" name = "endDate" id = "endDate" value="<%= event.endDate%>" required>
+
+                        <br>
+                    
+                        <label for="details" class="form-label">Details:</label>
+                        <textarea class = "form-control" name = "details" id = "details" style = "height: 140px" value="<%= event.details%>" placeholder="<%= event.details%>" required minlength="10"></textarea>
+
+                        <label for="image" class="form-label">Picture:</label>
+                        <input class = "form-control mb-3" type = "file" name = "image" placeholder="<%= event.image%>" id = "image" required>
+
+                        
+                        <button value = "submit" class = "btn btn-secondary mx-auto d-block mb-3" type = "submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <div class="line1"></div>
+
+    <%- include('../partials/footer.ejs')%>
